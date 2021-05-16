@@ -2,7 +2,7 @@ const express=require ("express");
 const path=require ("path");
 const hbs=require('hbs');
 const app=express();
-const port=process.env.port || 3001;
+const port=process.env.PORT || 3001;
 //static files serving
 
 const staticPath=path.join(__dirname,"../public");
