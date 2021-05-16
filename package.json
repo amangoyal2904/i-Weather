@@ -4,7 +4,8 @@
   "description": "Weather App using node and Express",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
   },
   "author": "Aman Goyal",
   "license": "ISC",
