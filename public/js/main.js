@@ -13,7 +13,14 @@ const getInfo = async(event) =>{
     }
     else{
         try{
+
             let url=`http://api.openweathermap.org/data/2.5/weather?q=${cityval}&units=metric&appid=cf3e7a4031eb0eb56e67dbafe5f01994`;
+            if(location.protocol=="http:"){
+                url=`http://api.openweathermap.org/data/2.5/weather?q=${cityval}&units=metric&appid=cf3e7a4031eb0eb56e67dbafe5f01994`;
+            }
+            else{
+               url= `https://api.openweathermap.org/data/2.5/weather?q=${cityval}&units=metric&appid=cf3e7a4031eb0eb56e67dbafe5f01994`;
+            }
             const response=await fetch(url);
             const data=await response.json();
             console.log(data);
